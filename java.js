@@ -15,7 +15,7 @@ function setGrid(totalSquares) {
     square.style.height = squareSize + "px"
     container.appendChild(square)
     square.addEventListener("mouseover", () => {
-        square.style.background = "gray"})
+        square.style.background = "white"})
     // square.addEventListener("mouseleave", () => {
     //    square.style.background = "black"
     // });
@@ -27,9 +27,14 @@ const btn = document.createElement("button")
 btn.textContent = "Customize"
 btn.addEventListener("click", () => {
     let input = prompt("Enter the number of squares per line:")
-    squaresPerLine = Number(input)
-    totalSquares = squaresPerLine **2
-    setGrid(totalSquares)
+    let value = Number(input)
+    if (value >= 1 && value <=100) {
+        squaresPerLine = value
+        totalSquares = squaresPerLine **2
+        setGrid(totalSquares)
+    } else {
+        alert("Enter a number between 1 and 100.")
+    }
 })
 
 const body = document.querySelector("body")
