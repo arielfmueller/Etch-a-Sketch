@@ -27,9 +27,21 @@ body {
   margin: 0;
   gap: 100px;
   background: var(--squareBackground);
-  color: var(--text);
 }
 
+/* Setting up the main div */
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1200px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+/* Square container */
 #container {
   display: flex;
   align-items: center;
@@ -54,6 +66,30 @@ body {
   transition: background 0.3s;
 }
 
+/* Setting up the menu, title and buttons */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  padding: 32px 20px;
+  background: var(--menu-bg);
+  box-shadow: var(--shadow);
+  border-radius: 24px;
+  margin: 0 32px 0 0;
+  border: 1px solid var(--border);
+  gap: 24px;
+}
+
+.title {
+  font-size: 2.2rem;
+  width: 100%;
+  text-align: center;
+  color: var(--title);
+  margin: 0;
+}
+
 button {
   margin: 8px auto;
   padding: 12px 24px;
@@ -72,41 +108,7 @@ button:hover {
   transform: translateY(-2px) scale(1.04);
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 260px;
-  padding: 32px 20px;
-  background: var(--menu-bg);
-  box-shadow: var(--shadow);
-  border-radius: 24px;
-  margin: 0 32px 0 0;
-  border: 1px solid var(--border);
-  color: var(--text);
-  gap: 24px;
-}
-
-.title {
-  font-size: 2.2rem;
-  width: 100%;
-  text-align: center;
-  color: var(--title);
-  margin: 0
-}
-
-.main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-  max-width: 1200px;
-  margin-bottom: 60px;
-  flex-wrap: wrap;
-}
-
+/* Setting up the footer */
 footer {
   position: fixed;
   bottom: 0;
