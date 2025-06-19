@@ -1,40 +1,94 @@
 :root {
-    box-sizing: border-box;
-    font-size: 16px;
-    --squareBackground: black;
+  box-sizing: border-box;
+  font-size: 16px;
+  --squareBackground: #23272f;
+  --accent: #2196f3;
+  --accent2: #00c6ff;
+  --menu-bg: rgba(0, 0, 0, 0.1);
+  --container-bg: rgba(36, 40, 48, 0.5);
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.18);
+  --text: #f3f6fa;
+  --title: #2196f3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  gap: 100px;
+  background: linear-gradient(135deg, #23272f 0%, #181c22 100%);
+  color: var(--text);
 }
 
 #container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 800px;
+  height: 800px;
+  min-width: 800px;
+  min-height: 800px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--container-bg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .square {
-    background-color: var(--squareBackground);  
-    /* transition: background 0.5s; */
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: background 0.3s;
 }
 
 button {
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+  margin: 12px auto;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--accent) 20%, var(--accent2) 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  min-width: 150px;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, var(--accent2) 60%, var(--accent) 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  padding: 32px 20px;
+  background: var(--menu-bg);
+  box-shadow: var(--shadow);
+  border-radius: 24px;
+  margin: 0 32px 0 0;
+  border: 1px solid var(--border);
+  color: var(--text);
+  gap: 18px;
+}
+
+.title {
+  font-size: 2.2rem;
+  width: 100%;
+  text-align: center;
+  color: var(--title);
 }
