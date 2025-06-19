@@ -7,7 +7,7 @@
   --menu-bg: rgba(0, 0, 0, 0.1);
   --container-bg: rgba(36, 40, 48, 0.5);
   --border: rgba(255, 255, 255, 0.08);
-  --shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.18);
+  --shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.18);
   --text: #f3f6fa;
   --title: #2196f3;
 }
@@ -21,12 +21,12 @@
 body {
   min-height: 100vh;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
   gap: 100px;
-  background: linear-gradient(135deg, #23272f 0%, #181c22 100%);
+  background: var(--squareBackground);
   color: var(--text);
 }
 
@@ -35,10 +35,12 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  width: 800px;
-  height: 800px;
-  min-width: 800px;
-  min-height: 800px;
+  width: 50vw;
+  height: 50vw;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 800px;
+  max-height: 800px;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--container-bg);
@@ -53,7 +55,7 @@ body {
 }
 
 button {
-  margin: 12px auto;
+  margin: 8px auto;
   padding: 12px 24px;
   font-size: 1.1rem;
   cursor: pointer;
@@ -83,7 +85,7 @@ button:hover {
   margin: 0 32px 0 0;
   border: 1px solid var(--border);
   color: var(--text);
-  gap: 18px;
+  gap: 24px;
 }
 
 .title {
@@ -91,4 +93,27 @@ button:hover {
   width: 100%;
   text-align: center;
   color: var(--title);
+  margin: 0
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1200px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  font-size: 0.9rem;
 }
